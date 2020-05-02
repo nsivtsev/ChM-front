@@ -7,6 +7,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 2. Запуск `ng serve`
 
+3. Адрес по умолчанию `http://localhost:4200`
+
 ### Примечания
 **Работает только форма отзывов**
 
