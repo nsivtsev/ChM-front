@@ -1,0 +1,205 @@
+<p class="heading text-center">Оцените работу нашей компании</p>
+<hr class="line">
+<div class="row">
+  <div class="col-md-8">
+    <p class="text-muted">Уважаемые партнёры!</p>
+
+    <p class="text-muted">Благодарим Вас за сотрудничество с компанией «ХИММЕД»!</p>
+
+    <p class="text-muted">С целью повышения качества работы компании «ХИММЕД» просим оценить наши условия сотрудничества
+      по пятибалльной шкале (где 1 – очень плохо, а 5 – отлично):</p>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="feedbackForm.assortment" name="assortment">
+            <option value="0" disabled>Ассортимент продукции</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="feedbackForm.processingTime" name="processingTime">
+            <option value="0" disabled>Срок и качество обработки заявок</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="feedbackForm.paymentConditions" name="paymentConditions">
+            <option value="0" disabled>Условия оплаты</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="feedbackForm.delivery" name="delivery">
+            <option value="0" disabled>Сроки и условия доставки продукции</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="feedbackForm.price" name="price">
+            <option value="0" disabled>Цена товара</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="feedbackForm.appearance" name="appearance">
+            <option value="0" disabled>Упаковка / внешний вид продукции</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <select class="custom-select" [(ngModel)]="feedbackForm.quality" name="quality">
+            <option value="0" disabled>Качетсво поставляемой продукции</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input class="form-control" type="text" placeholder="Имя" [(ngModel)]="feedbackForm.name" name="name">
+        </div>
+      </div>
+      <div class="col">
+        <div class="form-group">
+          <input class="form-control" type="tel" placeholder="Телефон" [(ngModel)]="feedbackForm.telephone"
+                 name="telephone">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+          <input class="form-control" type="email" placeholder="E-mail" [(ngModel)]="feedbackForm.email" required
+                 name="email" #email="ngModel" (change)="validate()">
+          <div *ngIf="this.feedbackForm.validateError" class="alert alert-danger mt-2">
+            Пожалуйста, укажите Ваш email
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="form-group">
+            <textarea class="form-control" rows="4" placeholder="Сообщение" [(ngModel)]="feedbackForm.message"
+                      name="message"></textarea>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col text-muted">
+        <p>Если в указанном списке нет пунктов, на которые Вы хотели бы обратить наше внимание, просим указать их.</p>
+
+        <p>По возможности оставьте развернутый комментарий о качестве работы компании «ХИММЕД» и Ваши пожелания для
+          улучшения и расширения сотрудничества.</p>
+
+        <p>Нам важно Ваше мнение!</p>
+        <div class="text-right">
+          <button class="btn btn-primary" (click)="submit()">ОТПРАВИТЬ</button>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="col text-right">
+    <div class="contacts">
+      <div class="mb-3 mb-md-5">
+        <p class="heading mb-2">ТЕЛЕФОНЫ</p>
+        <p>
+          +7 (495) 640 41 92<br/>
+          +7 (499) 682 65 55
+        </p>
+      </div>
+      <div>
+        <p class="heading mb-2">E-MAIL</p>
+        <p>
+          <a href="mailto:mail@chimmed.ru">mail@chimmed.ru</a>
+        </p>
+      </div>
+      <div>
+        <p class="heading mb-2">АДРЕС</p>
+        <p>
+          115230 Россия, Москва,<br/>
+          Каширское шоссе, дом 3,<br/>
+          корпус 2, строение 4/9<br/>
+          Бизнес центр «Ситиус Парк»<br/>
+        </p>
+      </div>
+    </div>
+    <div>
+      <app-subsribe></app-subsribe>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalCenterTitle">Отзыв отправлен</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body text-center py-5">
+        <div class="success-checkmark">
+          <div class="check-icon">
+            <span class="icon-line line-tip"></span>
+            <span class="icon-line line-long"></span>
+            <div class="icon-circle"></div>
+            <div class="icon-fix"></div>
+          </div>
+        </div>
+         Спасибо Вам за отзыв!<br>
+        Ваше мнение очень важно для нас!
+      </div>
+    </div>
+  </div>
+</div>

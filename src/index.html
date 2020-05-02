@@ -2,12 +2,124 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>ChMFront</title>
+  <title>Тестовый проект "Химмед"</title>
   <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--  <meta name="viewport" content="width=device-width, initial-scale=1">-->
+  <meta name="viewport" content="initial-scale=0.1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
-  <app-root></app-root>
+<header class="mb-3">
+  <div class="upper-menu">
+    <div class="container d-flex flex-row justify-content-between">
+      <div class="upper-menu__link d-flex"><a class="align-self-center"
+                                              href="mailto:mail@chimmed.ru">mail@chimmed.ru</a>
+      </div>
+      <div class="d-flex">
+        <div class="upper-menu__item">Доставка</div>
+        <div class="upper-menu__item">Новости</div>
+        <div class="upper-menu__item">Услуги</div>
+        <div class="upper-menu__item">Преимущества</div>
+        <div class="upper-menu__item">О нас</div>
+        <div class="upper-menu__item">Контакты</div>
+      </div>
+      <div class="d-flex">
+        <span class="align-self-center">&#128336;9:00 - 17:30</span>
+      </div>
+      <div class="d-flex">
+        <span class="align-self-center"><img src="assets/images/united-kingdom-flag-icon-32.png"> Eng</span>
+      </div>
+      <div class="d-flex">
+        <span class="align-self-center upper-menu__tel">+7 (945) 640-41-92</span>
+      </div>
+    </div>
+  </div>
+  <div class="container d-flex my-3">
+    <img src="assets/images/logo.png" class="mr-4">
+    <div class="catalog-button align-self-center mr-3"><img src="assets/images/hamburger.png">Каталог</div>
+    <div class="input-group align-self-center">
+      <div class="input-group-prepend">
+        <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">Везде
+        </button>
+        <div class="dropdown-menu">
+
+        </div>
+      </div>
+      <input type="text" class="form-control" placeholder="" aria-label="Example text with button addon"
+             aria-describedby="button-addon1">
+    </div>
+    <div class="align-self-center icons">
+      <img class="ml-3" src="assets/images/account.png">
+      <img class="ml-3" src="assets/images/favorites.png">
+      <img class="mx-3" src="assets/images/cart.png">
+    </div>
+    <div class="callback-button align-self-center text-center">
+      Заказать звонок
+    </div>
+  </div>
+  <div class="container d-flex flex-wrap categories">
+    <a href="#">Акции</a><br/>
+    <a href="#">Поставщики</a><br/>
+    <a href="#">В наличии</a><br/>
+    <a href="#">Преимущества</a><br/>
+    <a href="#">Реактивы</a><br/>
+    <a href="#">Стандарты</a><br/>
+    <a href="#">Life Sciences</a><br/>
+    <a href="#">Оборудование</a><br/>
+    <a href="#">Аналитика</a><br/>
+    <a href="#">Микроэлектроника</a><br/>
+    <a href="#">Фармпроизводствам</a><br/>
+  </div>
+</header>
+<app-root></app-root>
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-4">
+        <p>МОСКВА</p>
+        <p>+7 (495) 640-41-92<br/>
+          +7 (499) 682-65-55</p>
+        <p><a href="mailto:mail@chimmed.ru">mail@chimmed.ru</a></p>
+        <p>115230 Россия, Москва,<br/>
+          Каширское шоссе, дом 3,<br/>
+          корпус 2, строение 4/9<br/>
+          Бизнес центр «Сириус Парк»</p>
+      </div>
+      <div class="col-4">
+        <p>РОССИЯ</p>
+        <p>+7 (812) 605-00-61 <span class="text-muted">(Санкт Петербург)</span><br/>
+          +7 (843) 273-67-61 <span class="text-muted">(Казань)</span><br/>
+          +7 (383) 227-99-74 <span class="text-muted">(Новосибирск)</span></p>
+        <p class="links">
+          <a href="#">Вакансии</a><br/>
+          <a href="#">Оферта</a><br/>
+          <a href="#">Политика конфиденциальности</a><br/>
+          <a href="#">Соглашение об обработке<br/>
+            персональных данных</a>
+        </p>
+      </div>
+      <div class="col-4">
+        <p>Главная</p>
+        <p class="links">
+          <a href="#">Акции</a><br/>
+          <a href="#">Поставщики</a><br/>
+          <a href="#">В наличии</a><br/>
+          <a href="#">Преимущества</a><br/>
+          <a href="#">Реактивы</a><br/>
+          <a href="#">Стандарты</a><br/>
+          <a href="#">Life Sciences</a><br/>
+          <a href="#">Оборудование</a><br/>
+          <a href="#">Аналитика</a><br/>
+          <a href="#">Микроэлектроника</a><br/>
+          <a href="#">Фармпроизводствам</a><br/>
+        </p>
+        <a href="https://github.com/nsivtsev/ChM-front" target="_blank">
+          <img class="github-banner" src="assets/images/open-in-github-black.png">
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
 </body>
 </html>

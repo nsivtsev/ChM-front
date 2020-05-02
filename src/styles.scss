@@ -1,1 +1,103 @@
 /* You can add global styles to this file, and also import other style files */
+//Цвет заголовков
+$h-color : #005090;
+$font-family-base : "PT Sans Caption";
+$bg-color-gray: #9a9a9a;
+
+body {
+  font-family: "PT Sans Caption";
+}
+
+.container, .container-fluid { min-width: 1170px; }
+
+.upper-menu {
+  font-size: .8rem;
+  background-color: #e6e6ec;
+  .upper-menu__item {
+    color: #9a9a9a;
+    padding: 5px 15px;
+    &:hover {
+      background-color: darken($bg-color-gray, 10%);
+      color: #FFFFFF;
+    }
+  }
+  .upper-menu__link a{
+    color: $h-color;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .upper-menu__tel {
+    color: $h-color;
+  }
+  img {
+    vertical-align: text-bottom;
+  }
+}
+
+.catalog-button {
+  background-color: #005090;
+  border-radius: 5px;
+  padding: 8px 20px;
+  color: white;
+  white-space: nowrap;
+  img {
+    vertical-align: text-bottom;
+    padding-right: 5px;
+  }
+  &:hover {
+    background-color: darken(#005090, 10%);
+  }
+}
+
+.callback-button {
+  background-color: #e4087e;
+  padding: 8px 20px;
+  border-radius: 5px;
+  color: white;
+  line-height: 17px;
+  &:hover {
+    background-color: darken(#005090, 10%);
+  }
+}
+
+.categories {
+  a {
+    text-decoration: none;
+    color: #676767;
+    padding: 0 15px;
+    white-space: nowrap;
+    cursor: pointer;
+    &:hover {
+      text-decoration: none;
+      color: white;
+      background-color: #9a9a9a;
+    }
+  }
+}
+
+.icons {
+  white-space: nowrap;
+}
+
+.footer {
+  background-color: #e6e6ec;
+  color: $h-color;
+  a {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.links {
+  font-size: .8rem;
+  cursor: pointer;
+}
+
+.github-banner {
+  width: 100px;
+}
